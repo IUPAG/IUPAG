@@ -1,0 +1,106 @@
+{
+    "region_codes": {
+        "AUSTRALIA": {
+            "codes": ["AU", "AUS", "AUSTRALIA"],
+            "description": "Australia region releases",
+            "notes": "Should not be combined with Europe releases"
+        },
+        "BRAZIL": {
+            "codes": ["BR", "BRA", "BRAZIL"],
+            "description": "Brazil region releases"
+        },
+        "CANADA": {
+            "codes": ["CA", "CAN", "CANADA"],
+            "description": "Canada region releases",
+            "notes": "Typically included with USA releases"
+        },
+        "CHINA": {
+            "codes": ["CH", "CHN", "CHINA"],
+            "description": "China region releases"
+        },
+        "FRANCE": {
+            "codes": ["FR", "FRA", "FRANCE"],
+            "description": "France region releases"
+        },
+        "GERMANY": {
+            "codes": ["DE", "GER", "GERMANY"],
+            "description": "Germany region releases"
+        },
+        "HONG_KONG": {
+            "codes": ["HK", "HKG", "HONGKONG"],
+            "description": "Hong Kong region releases"
+        },
+        "ITALY": {
+            "codes": ["IT", "ITA", "ITALY"],
+            "description": "Italy region releases"
+        },
+        "JAPAN": {
+            "codes": ["JP", "JAP", "JAPAN"],
+            "description": "Japan region releases"
+        },
+        "KOREA": {
+            "codes": ["KR", "KOR", "KOREA"],
+            "description": "Korea region releases"
+        },
+        "NETHERLANDS": {
+            "codes": ["NL", "NLD", "NETHERLANDS"],
+            "description": "Netherlands region releases"
+        },
+        "SPAIN": {
+            "codes": ["ES", "ESP", "SPAIN"],
+            "description": "Spain region releases"
+        },
+        "SWEDEN": {
+            "codes": ["SE", "SWE", "SWEDEN"],
+            "description": "Sweden region releases"
+        },
+        "USA": {
+            "codes": ["US", "USA", "UNITEDSTATES", "UNITED STATES"],
+            "description": "United States releases",
+            "notes": "Includes Canada releases"
+        },
+        "FINLAND": {
+            "codes": ["FI", "FIN", "FINLAND"],
+            "description": "Finland region releases"
+        },
+        "GREECE": {
+            "codes": ["GR", "GRC", "GREECE"],
+            "description": "Greece region releases"
+        },
+        "HOLLAND": {
+            "codes": ["HO", "HOLLAND", "NETHERLANDS"],
+            "description": "Holland region releases"
+        },
+        "UNKNOWN": {
+            "codes": ["UN", "UNKNOWN"],
+            "description": "Unknown region releases"
+        }
+    },
+    "multi_region_codes": {
+        "WORLD": {
+            "codes": ["WORLD", "GLOBAL", "ALL"],
+            "description": "Worldwide release",
+            "includes": ["ALL"]
+        },
+        "EUROPE": {
+            "codes": ["EU", "EUR", "EUROPE"],
+            "description": "European release",
+            "includes": ["FRANCE", "GERMANY", "ITALY", "SPAIN", "NETHERLANDS", "SWEDEN"]
+        },
+        "ASIA": {
+            "codes": ["AS", "ASI", "ASIA"],
+            "description": "Asian release",
+            "includes": ["CHINA", "HONG_KONG", "KOREA"]
+        },
+        "JAPAN": {
+            "codes": ["JP", "JAP", "JAPAN"],
+            "description": "Japanese release",
+            "includes": ["JAPAN"]
+        },
+        "USA": {
+            "codes": ["US", "USA", "UNITEDSTATES", "UNITED STATES"],
+            "description": "North American release",
+            "includes": ["United States", "Canada"]
+        }
+    }
+}
