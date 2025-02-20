@@ -353,6 +353,36 @@
             "name": "Translation Localized",
             "codes": ["Localized Translation"],
             "description": "Localized translation of a game"
+        },
+        "content_nsfw": {
+            "name": "NSFW",
+            "codes": ["NSFW", "Adult", "Nudity"],
+            "description": "Contains nudity or adult content"
+        },
+        "edition_special": {
+            "name": "Special Edition",
+            "codes": ["Special Edition", "SE", "Collector's Edition", "CE", "Limited Edition", "LE"],
+            "description": "Special, collector's, or limited edition versions"
+        },
+        "edition_deluxe": {
+            "name": "Deluxe Edition",
+            "codes": ["Deluxe Edition", "DE", "Complete Edition"],
+            "description": "Deluxe or complete editions"
+        },
+        "edition_goty": {
+            "name": "GOTY",
+            "codes": ["Game of the Year", "GOTY", "Game of the year edition", "GOTY Edition"],
+            "description": "Game of the Year editions"
+        },
+        "parent_clone_child": {
+            "name": "Clone",
+            "codes": ["Clone"],
+            "description": "Indicates clone or hack of parent ROM"
+        },
+        "hack": {
+            "name": "Hack",
+            "codes": ["Hack", "ROM Hack", "Mod", "Modded"],
+            "description": "Indicates ROM hack or mod"
         }
     }
 }

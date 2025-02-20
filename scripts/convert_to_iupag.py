@@ -59,7 +59,7 @@ def parse_dat_file(file_path):
             # Extract region from name and set game properties
             game.region = extract_region(game_name)
             game.title = extract_title(game_name)
-            game.languages = extract_languages(game_name)
+            game.languages = metadata_manager.extract_languages(game_name)
             game.revision = metadata_manager.get_revision_name(game_name)
             game.release_date = extract_date(game_name)
             game.meta_info = metadata_manager.extract_metainfo(game_name)
@@ -78,21 +78,6 @@ def extract_title(game_name):
 
 def extract_region(game_name):
     return convert_region(game_name).strip('(#)')
-
-def extract_languages(game_name):
-    # Look for language codes in parentheses
-    lang_matches = re.findall(r'\(([^)]+)\)', game_name)
-    matched_languages = set()
-
-    for match in lang_matches:
-        # Split by comma or space
-        tokens = [token.strip() for token in re.split(r'[,\s]+', match)]
-        for token in tokens:
-            lang = metadata_manager.find_matching_language(token)
-            if lang:
-                matched_languages.add(lang)
-
-    return sorted(list(matched_languages))
 
 def convert_region(game):
     game = game.upper()

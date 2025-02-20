@@ -1,5 +1,6 @@
 import json
 import os
+import re
 
 class MetadataManager:
     def __init__(self):
@@ -14,21 +15,6 @@ class MetadataManager:
         except Exception as e:
             print(f"Error loading metadata: {e}")
             self.metadata = None
-
-    def find_matching_region(self, token):
-        if not self.metadata:
-            return None
-            
-        token = token.strip().upper()
-        # Check single regions first
-        for region_key, region_data in self.metadata['region_codes'].items():
-            if token in region_data['codes']:
-                return region_data['name']
-        # Check multi-regions
-        for region_key, region_data in self.metadata['multi_region_codes'].items():
-            if token in region_data['codes']:
-                return region_data['name']
-        return None
 
     def find_matching_language(self, token):
         if not self.metadata:
@@ -58,14 +44,50 @@ class MetadataManager:
 
     def extract_metainfo(self, game_name):
         # Example of a game with metainfo: Super Noah's Ark 3D (World) (Steam) (Unl)
-
-        if not self.metadata:
-            return []
-            
+        
         game_name = game_name.upper()
         meta_info = []
-        for meta_key, meta_data in self.metadata['metainfo_tags'].items():
-            for meta_code in meta_data['codes']:
-                if meta_code.upper() in game_name:
-                    meta_info.append(meta_data['name'])
+        # Find all text within parentheses
+        parts = [part.strip('()') for part in game_name.split('(')[1:]]
+        
+        for part in parts:
+            for meta_key, meta_data in self.metadata['metainfo_tags'].items():
+                for meta_code in meta_data['codes']:
+                    if meta_code.upper() == part:
+                        meta_info.append(meta_data['name'])
         return meta_info
+
+    def find_matching_region(self, token):
+        if not self.metadata:
+            return None
+            
+        token = token.strip().upper()
+        # Check single regions first
+        for region_key, region_data in self.metadata['region_codes'].items():
+            if token in region_data['codes']:
+                return region_data['name']
+        # Check multi-regions
+        for region_key, region_data in self.metadata['multi_region_codes'].items():
+            if token in region_data['codes']:
+                return region_data['name']
+        return None
+
+    def extract_languages(self, game_name):
+        # confirm it's a tranlation before grabbing the languages
+        game_name = game_name.upper()
+        if "(T-" not in game_name:
+            return []
+        
+        # Look for language codes in parentheses
+        lang_matches = re.findall(r'\(([^)]+)\)', game_name)
+        matched_languages = set()
+
+        for match in lang_matches:
+            # Split by comma or space
+            tokens = [token.strip() for token in re.split(r'[,\s]+', match)]
+            for token in tokens:
+                lang = self.find_matching_language(token)
+                if lang:
+                    matched_languages.add(lang)
+
+        return sorted(list(matched_languages))
