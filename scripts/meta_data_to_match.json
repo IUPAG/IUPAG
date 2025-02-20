@@ -109,5 +109,82 @@
             "description": "North American release",
             "includes": ["USA", "CAN"]
         }
+    },
+    "language_codes": {
+        "English": {
+            "name": "En",
+            "codes": ["EN", "ENG", "ENGLISH"],
+            "description": "English language"
+        },
+        "French": {
+            "name": "Fr",
+            "codes": ["FR", "FRA", "FRENCH"],
+            "description": "French language"
+        },
+        "German": {
+            "name": "De",
+            "codes": ["DE", "DEU", "GER", "GERMAN"],
+            "description": "German language"
+        },
+        "Spanish": {
+            "name": "Es",
+            "codes": ["ES", "ESP", "SPANISH"],
+            "description": "Spanish language"
+        },
+        "Italian": {
+            "name": "It",
+            "codes": ["IT", "ITA", "ITALIAN"],
+            "description": "Italian language"
+        },
+        "Japanese": {
+            "name": "Ja",
+            "codes": ["JA", "JPN", "JAPANESE"],
+            "description": "Japanese language"
+        },
+        "Korean": {
+            "name": "Ko",
+            "codes": ["KO", "KOR", "KOREAN"],
+            "description": "Korean language"
+        },
+        "Chinese": {
+            "name": "Zh",
+            "codes": ["ZH", "CHN", "CHINESE"],
+            "description": "Chinese language"
+        },
+        "Dutch": {
+            "name": "Nl",
+            "codes": ["NL", "NLD", "DUTCH"],
+            "description": "Dutch language"
+        },
+        "Portuguese": {
+            "name": "Pt",
+            "codes": ["PT", "POR", "PORTUGUESE"],
+            "description": "Portuguese language"
+        },
+        "Russian": {
+            "name": "Ru",
+            "codes": ["RU", "RUS", "RUSSIAN"],
+            "description": "Russian language"
+        },
+        "Swedish": {
+            "name": "Sv",
+            "codes": ["SV", "SWE", "SWEDISH"],
+            "description": "Swedish language"
+        },
+        "Finnish": {
+            "name": "Fi",
+            "codes": ["FI", "FIN", "FINNISH"],
+            "description": "Finnish language"
+        },
+        "Hindi": {
+            "name": "Hi",
+            "codes": ["HI", "HIN", "HINDI"],
+            "description": "Hindi language"
+        },
+        "Ukrainian": {
+            "name": "Uk",
+            "codes": ["UK", "UKR", "UKRAINIAN"],
+            "description": "Ukrainian language"
+        }
     }
 }
