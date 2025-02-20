@@ -22,7 +22,7 @@ class Game:
         self.publisher = ""  # Game publisher
         self.region = "World"  # Default region if unknown
         self.release_date = "1970-01-01"  # Default Unix epoch if unknown
-        self.revision = "00"  # Version string or revision number
+        self.revision = "rev10"  # Default to retail release
         self.languages = []  # List of supported languages
         self.dump_flags = []  # List of dump info flags
         self.attributes = {
@@ -47,7 +47,7 @@ class Game:
         self.rom_status = status
 
     def __str__(self):
-        return self.name
+        return f"{self.name} ({self.region}) {self.revision}"
 
     def __repr__(self):
         return f"Game(id='{self.game_id}', name='{self.name}')"
@@ -99,9 +99,7 @@ class Game:
         # Release Date
         parts.append(f"(v{self.release_date})")
         
-        # Revision (if exists)
-        if self.revision != "00":
-            parts.append(f"(rev{self.revision})")
+        parts.append(f"({self.revision})")
             
         # Languages
         if self.languages:

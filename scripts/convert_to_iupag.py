@@ -83,7 +83,7 @@ def parse_dat_file(file_path):
             game.region = extract_region(game_name)
             game.title = extract_title(game_name)
             game.languages = extract_languages(game_name)
-            parse_game_info(game, game_name)
+            game.revision = extract_revision(game_name)
             
             system.add_game(game)
                 
@@ -124,11 +124,22 @@ def extract_languages(game_name):
 
     return sorted(list(matched_languages))
 
-def parse_game_info(game, name):
-    # Parse revision
-    rev_match = re.search(r'\(Rev (\d+)\)', name, re.IGNORECASE)
-    if rev_match:
-        game.revision = rev_match.group(1).zfill(2)
+def extract_revision(game_name):
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    json_path = os.path.join(current_dir, 'meta_data_to_match.json')
+    metadata = load_region_metadata(json_path)
+    
+    if not metadata:
+        return "rev10"
+    
+    name_upper = game_name.upper()
+    
+    for rev_type, rev_data in metadata['revision'].items():
+        for code in rev_data['codes']:
+            if code.upper() in name_upper:
+                return rev_data['name']
+    
+    return "rev10"  # Default to retail release if no match found
 
 def convert_region(game):
     # Get the directory of the current script
