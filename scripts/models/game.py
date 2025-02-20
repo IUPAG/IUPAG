@@ -34,6 +34,7 @@ class Game:
         self.universe_prefix = ""  # Game universe prefix (Mario, Pokemon, etc)
         self.sport_prefix = ""  # Sport game prefix if applicable
         self.clone_of_id = None  # Add this new property
+        self.file_extension = ""  # Add this line with the other properties
 
     def add_rom(self, name: str, size: int, crc: str, md5: str, 
                 sha1: str, sha256: str, status: str):
@@ -76,42 +77,47 @@ class Game:
     def format_iupag_name(self) -> str:
         """Generate filename according to IUPAG naming convention.
         
-        Example output:
+        Format:
         Title <sep> Subtitle (@Dev, Pub)-(#Region)-(vDate)-(revX.Y.Z)-(T-Lang) [flag]-{Attributes}-(MetaInfo).ext
         """
-
         parts = []
         
-        # Add universe/sport prefix if present
-        if self.universe_prefix:
-            parts.append(f"{self.universe_prefix} ")
-        elif self.sport_prefix:
-            parts.append(f"{self.sport_prefix} ")
-            
-        # Add main title components
-        parts.append(self.title)
+        # Title and Subtitle
         if self.subtitle:
-            parts.append(f"{self.separator}{self.subtitle} - ")
+            parts.append(f"{self.title} {self.separator} {self.subtitle}")
+        else:
+            parts.append(self.title)
             
-        # Add optional tags
+        # Developer/Publisher
         if self.developer or self.publisher:
             dev_pub = f"(@{self.developer}, {self.publisher})" if self.developer else f"(@{self.publisher})"
             parts.append(dev_pub)
-        else:
-            parts.append("-")
+            
+        # Region
         parts.append(f"(#{self.region})")
+        
+        # Release Date
         parts.append(f"(v{self.release_date})")
         
+        # Revision (if exists)
         if self.revision != "00":
             parts.append(f"(rev{self.revision})")
             
+        # Languages
         if self.languages:
-            parts.append(f"(T-{','.join(self.languages)})")
+            sorted_langs = sorted(self.languages)
+            # If English is present, move it to the front
+            if 'En' in sorted_langs:
+                sorted_langs.remove('En')
+                sorted_langs.insert(0, 'En')
+            parts.append(f"(T-{','.join(sorted_langs)})")
             
+        # Dump flags
         if self.dump_flags:
             parts.append(f"[{''.join(self.dump_flags)}]")
             
-        if any(self.attributes.values()):
+        # Attributes
+        if any(v for k, v in self.attributes.items() if v):
             attr_parts = []
             if self.attributes["players"] != "1P":
                 attr_parts.append(self.attributes["players"])
@@ -121,9 +127,17 @@ class Game:
                 attr_parts.append(",".join(self.attributes["controllers"]))
             if attr_parts:
                 parts.append(f"{{{';'.join(attr_parts)}}}")
-                
+        
+        # Meta info
         if self.meta_info:
             parts.append(f"({';'.join(self.meta_info)})")
+        
+        # Join with hyphens
+        if len(parts) > 1:
+            result = " ".join(parts[0:1] + ["-".join(parts[1:])]).rstrip()
+        # Add extension
+        if self.file_extension:
+            result += f".{self.file_extension}"
             
-        return " ".join(parts)
+        return result
 

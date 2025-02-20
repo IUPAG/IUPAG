@@ -63,8 +63,13 @@ def parse_dat_file(file_path):
             # Parse ROM information
             rom_elem = game_elem.find('rom')
             if rom_elem is not None:
+                rom_name = rom_elem.get('name', '')
+                # Extract file extension
+                file_ext = os.path.splitext(rom_name)[1].lstrip('.')
+                game.file_extension = file_ext.lower() if file_ext else ''
+                
                 game.add_rom(
-                    name=rom_elem.get('name', ''),
+                    name=rom_name,
                     size=int(rom_elem.get('size', 0)),
                     crc=rom_elem.get('crc', ''),
                     md5=rom_elem.get('md5', ''),
