@@ -60,8 +60,9 @@ def parse_dat_file(file_path):
             game.region = extract_region(game_name)
             game.title = extract_title(game_name)
             game.languages = extract_languages(game_name)
-            game.revision = extract_revision(game_name)
+            game.revision = metadata_manager.get_revision_name(game_name)
             game.release_date = extract_date(game_name)
+            game.meta_info = metadata_manager.extract_metainfo(game_name)
             
             system.add_game(game)
                 
@@ -92,9 +93,6 @@ def extract_languages(game_name):
                 matched_languages.add(lang)
 
     return sorted(list(matched_languages))
-
-def extract_revision(game_name):
-    return metadata_manager.get_revision_name(game_name)
 
 def convert_region(game):
     game = game.upper()

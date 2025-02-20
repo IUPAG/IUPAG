@@ -55,3 +55,17 @@ class MetadataManager:
         if not self.metadata or region not in self.metadata['multi_region_codes']:
             return False
         return self.metadata['multi_region_codes'][region].get('includes', []) == ["ALL"]
+
+    def extract_metainfo(self, game_name):
+        # Example of a game with metainfo: Super Noah's Ark 3D (World) (Steam) (Unl)
+
+        if not self.metadata:
+            return []
+            
+        game_name = game_name.upper()
+        meta_info = []
+        for meta_key, meta_data in self.metadata['metainfo_tags'].items():
+            for meta_code in meta_data['codes']:
+                if meta_code.upper() in game_name:
+                    meta_info.append(meta_data['name'])
+        return meta_info

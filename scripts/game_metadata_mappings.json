@@ -276,5 +276,83 @@
             ], 
             "description": "Aftermarket or modern re-releases"
         }
+    },
+    "metainfo_tags": {
+        "dist_steam": {
+            "name": "Steam",
+            "codes": ["STEAM"],
+            "description": "Steam platform distribution"
+        },
+        "dist_itch": {
+            "name": "Itch",
+            "codes": ["ITCH", "itch.io", "Itch Release"],
+            "description": "Itch.io platform distribution"
+        },
+        "dist_gog": {
+            "name": "GOG",
+            "codes": ["GOG", "Good Old Games", "GOG Release"],
+            "description": "GOG.com platform distribution"
+        },
+        "dist_epic": {
+            "name": "Epic",
+            "codes": ["EPIC", "Epic Games", "EGS"],
+            "description": "Epic Games Store distribution"
+        },
+        "dist_virtual_console": {
+            "name": "VirtualConsole",
+            "codes": ["Virtual Console", "VC"],
+            "description": "Nintendo Virtual Console distribution"
+        },
+        "dist_unlicensed": {
+            "name": "Unl",
+            "codes": ["Unl", "Unlicensed"],
+            "description": "Unlicensed or unofficial release"
+        },
+        "dist_aftermarket": {
+            "name": "Aftermarket",
+            "codes": ["Aftermarket", "After Market", "Post-Release"],
+            "description": "Aftermarket or post-release distribution"
+        },
+        "platform _windows": {
+            "name": "Windows",
+            "codes": ["WIN", "Windows"],
+            "description": "Windows platform"
+        },
+        "platform_mac": {
+            "name": "Mac",
+            "codes": ["MAC", "MacOS", "OSX"],
+            "description": "Mac platform"
+        },
+        "platform_linux": {
+            "name": "Linux",
+            "codes": ["LIN", "Linux"],
+            "description": "Linux platform"
+        },
+        "platform_android": {
+            "name": "Android",
+            "codes": ["AND", "Android"],
+            "description": "Android platform"
+        },
+        "platform_ios": {
+            "name": "iOS",
+            "codes": ["IOS", "iPhone", "iPad"],
+            "description": "iOS platform"
+        },
+        "romhack_metrics": {
+            "name": "RomHack Metrics",
+            "codes": ["Exits=", "Stars=", "M#"],
+            "description": "Metrics for ROM hacks (exits, stars, mapper numbers)",
+            "format": "code+number"
+        },
+        "translation_literal": {
+            "name": "Translation Literal",
+            "codes": ["Translation", "Literal Translation"],
+            "description": "Literal translation of a game"
+        },
+        "translation_localized": {
+            "name": "Translation Localized",
+            "codes": ["Localized Translation"],
+            "description": "Localized translation of a game"
+        }
     }
 }
