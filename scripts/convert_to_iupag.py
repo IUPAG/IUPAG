@@ -4,34 +4,11 @@ import re
 import os
 from models.game import Game
 from models.system import System
+from metadata_manager import MetadataManager
 import glob
 
-def load_region_metadata(json_path):
-    try:
-        with open(json_path, 'r') as f:
-            return json.load(f)
-    except Exception as e:
-        print(f"Error loading metadata: {e}")
-        return None
-
-def find_matching_region(token, metadata):
-    token = token.strip().upper()
-    # Check single regions first
-    for region_key, region_data in metadata['region_codes'].items():
-        if token in region_data['codes']:
-            return region_data['name']
-    # Check multi-regions
-    for region_key, region_data in metadata['multi_region_codes'].items():
-        if token in region_data['codes']:
-            return region_data['name']
-    return None
-
-def find_matching_language(token, metadata):
-    token = token.strip().upper()
-    for lang_key, lang_data in metadata['language_codes'].items():
-        if token in lang_data['codes']:
-            return lang_data['name']
-    return None
+# Create metadata manager instance
+metadata_manager = MetadataManager()
 
 def parse_dat_file(file_path):
     try:
@@ -98,18 +75,9 @@ def extract_title(game_name):
     return title.strip()
 
 def extract_region(game_name):
-    metadata_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'meta_data_to_match.json')
-    metadata = load_region_metadata(metadata_path)
     return convert_region(game_name).strip('(#)')
 
 def extract_languages(game_name):
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    json_path = os.path.join(current_dir, 'meta_data_to_match.json')
-    metadata = load_region_metadata(json_path)
-    
-    if not metadata:
-        return []
-
     # Look for language codes in parentheses
     lang_matches = re.findall(r'\(([^)]+)\)', game_name)
     matched_languages = set()
@@ -118,60 +86,30 @@ def extract_languages(game_name):
         # Split by comma or space
         tokens = [token.strip() for token in re.split(r'[,\s]+', match)]
         for token in tokens:
-            lang = find_matching_language(token, metadata)
+            lang = metadata_manager.find_matching_language(token)
             if lang:
                 matched_languages.add(lang)
 
     return sorted(list(matched_languages))
 
 def extract_revision(game_name):
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    json_path = os.path.join(current_dir, 'meta_data_to_match.json')
-    metadata = load_region_metadata(json_path)
-    
-    if not metadata:
-        return "rev10"
-    
-    name_upper = game_name.upper()
-    
-    for rev_type, rev_data in metadata['revision'].items():
-        for code in rev_data['codes']:
-            if code.upper() in name_upper:
-                return rev_data['name']
-    
-    return "rev10"  # Default to retail release if no match found
+    return metadata_manager.get_revision_name(game_name)
 
 def convert_region(game):
-    # Get the directory of the current script
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    json_path = os.path.join(current_dir, 'meta_data_to_match.json')
-    
-    metadata = load_region_metadata(json_path)
-    if not metadata:
-        return "(#World)"
-
     game = game.upper()
-
     groups = re.findall(r'\(([^)]+)\)', game)
     matched_regions = set()
     
     for group in groups:
         tokens = [token.strip().upper() for token in group.split(',')]
         for token in tokens:
-            region = find_matching_region(token, metadata)
+            region = metadata_manager.find_matching_region(token)
             if region:
-                # If it's a multi-region code, expand it
-                if region in metadata['multi_region_codes']:
-                    includes = metadata['multi_region_codes'][region].get('includes', [])
-                    if includes == ["ALL"]:
-                        return "(#World)"
-                    # matched_regions.update(includes)
-                    matched_regions.add(region)
-                else:
-                    matched_regions.add(region)
+                if metadata_manager.is_world_region(region):
+                    return "(#World)"
+                matched_regions.add(region)
 
     if matched_regions:
-        # Sort to ensure consistent output
         region_str = ", ".join(sorted(matched_regions))
         return f"(#{region_str})"
     return "(#World)"
