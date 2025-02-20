@@ -4,6 +4,7 @@ import re
 import os
 from models.game import Game
 from models.system import System
+import glob
 
 def load_region_metadata(json_path):
     try:
@@ -172,7 +173,7 @@ def print_games(dat_file):
     if not system:
         return
     
-    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'datFiles')
+    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '.exports')
     os.makedirs(output_dir, exist_ok=True)
     
     base_name = os.path.splitext(os.path.basename(dat_file))[0]
@@ -187,10 +188,8 @@ def print_games(dat_file):
     print(f"\nTotal games: {len(system.games)}")
     print(f"Output saved to: {output_file}")
 
-# List of DAT files to process
-dat_files = [
-    "../.downloads/Nintendo - Game Boy Advance (20250216-134516).dat"
-]
+# Get all .dat files in the .downloads/nointro directory
+dat_files = glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../.imports/nointro/*.dat"))
 
 # Process each DAT file
 for dat_file in dat_files:

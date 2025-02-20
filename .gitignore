@@ -1,8 +1,9 @@
 .venv
 
-# This is where the DATs and other files will be downloaded to
-# It should not be committed to the repository
-.downloads
+# Where Dat files that need to be converted are stored
+.imports
+# Where the converted files are saved
+.exports
 
 __pycache__/
 *.pyc
