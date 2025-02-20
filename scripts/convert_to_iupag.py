@@ -61,6 +61,7 @@ def parse_dat_file(file_path):
             game.title = extract_title(game_name)
             game.languages = extract_languages(game_name)
             game.revision = extract_revision(game_name)
+            game.release_date = extract_date(game_name)
             
             system.add_game(game)
                 
@@ -113,6 +114,14 @@ def convert_region(game):
         region_str = ", ".join(sorted(matched_regions))
         return f"(#{region_str})"
     return "(#World)"
+
+def extract_date(game_name):
+    # Example game name SomeGame (USA) (Proto) (1995-05-24)
+    date_match = re.search(r'\((\d{4}-\d{2}-\d{2})\)', game_name)
+    if date_match:
+        return date_match.group(1)
+    
+    return "1970-01-01"
 
 def print_games(dat_file):
     print(f"\nProcessing {dat_file}:")
