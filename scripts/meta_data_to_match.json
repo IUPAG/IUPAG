@@ -186,5 +186,95 @@
             "codes": ["UK", "UKR", "UKRAINIAN"],
             "description": "Ukrainian language"
         }
+    },
+    "revision": {
+        "Prototype": {
+            "name": "rev00",
+            "codes": [
+                "Prototype",
+                "Tech Demo",
+                "Proto",
+                "Proto 1",
+                "Proto 2",
+                "Proto 3",
+                "Proto 4",
+                "Proto 5"
+            ],
+            "description": "Early development version, not intended for release"
+        },
+        "Alpha": {
+            "name": "rev01",
+            "codes": [
+                "Rev 01",
+                "Alpha"
+            ],
+            "description": "Alpha version"
+        },
+        "Beta": {
+            "name": "rev02",
+            "codes": [
+                "Rev 02",
+                "Beta",
+                "Beta 1",
+                "Beta 2",
+                "Beta 3",
+                "Beta 4",
+                "Beta 5"
+            ],
+            "description": "Beta version"
+        },
+        "Demo": {
+            "name": "rev03",
+            "codes": [
+                "Rev 03",
+                "Demo",
+                "Demo 1",
+                "Demo 2",
+                "Demo 3",
+                "Demo 4",
+                "Demo 5"
+            ],
+            "description": "Demo version"
+        },
+        "Sample": {
+            "name": "rev04",
+            "codes": [
+                "Rev 04",
+                "Sample"
+            ],
+            "description": "Sample version"
+        },
+        "Release": {
+            "name": "rev10",
+            "codes": [
+                "Rev 10",
+                "Rev 11", 
+                "Rev 12",
+                "Rev 13",
+                "Rev 14",
+                "Rev 15",
+                "Rev 16",
+                "Rev 17",
+                "Rev 18",
+                "Rev 19"
+            ],
+            "description": "Official retail release versions"
+        },
+        "Re-Release or Aftermarket": {
+            "name": "Re-release",
+            "codes": [
+                "Rev 20",
+                "Rev 21",
+                "Rev 22",
+                "Rev 23",
+                "Rev 24",
+                "Rev 25",
+                "Rev 26",
+                "Rev 27",
+                "Rev 28",
+                "Rev 29"
+            ], 
+            "description": "Aftermarket or modern re-releases"
+        }
     }
 }
