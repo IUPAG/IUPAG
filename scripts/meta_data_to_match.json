@@ -1,95 +1,110 @@
 {
     "region_codes": {
-        "AUS": {
+        "Australia": {
+            "name": "Australia",
             "codes": ["AUS", "AUSTRALIA"],
             "description": "Australia region releases",
             "notes": "Should not be combined with Europe releases"
         },
-        "BRA": {
+        "Brazil": {
+            "name": "Brazil",
             "codes": ["BRA", "BRAZIL"],
             "description": "Brazil region releases"
         },
-        "CAN": {
+        "Canada": {
+            "name": "Canada",
             "codes": ["CAN", "CANADA"],
             "description": "Canada region releases",
             "notes": "Typically included with USA releases"
         },
-        "CHN": {
+        "China": {
+            "name": "China",
             "codes": ["CHN", "CHINA"],
             "description": "China region releases"
         },
-        "FRA": {
+        "France": {
+            "name": "France",
             "codes": ["FRA", "FRANCE"],
             "description": "France region releases"
         },
-        "DEU": {
+        "Germany": {
+            "name": "Germany",
             "codes": ["GER", "GERMANY"],
             "description": "Germany region releases"
         },
-        "HKG": {
+        "Hong Kong": {
+            "name": "Hong Kong",
             "codes": ["HKG", "HONGKONG"],
             "description": "Hong Kong region releases"
         },
-        "ITA": {
+        "Italy": {
+            "name": "Italy",
             "codes": ["ITA", "ITALY"],
             "description": "Italy region releases"
         },
-        "JPN": {
+        "Japan": {
+            "name": "Japan",
             "codes": ["JAP", "JAPAN"],
             "description": "Japan region releases"
         },
-        "KOR": {
+        "Korea": {
+            "name": "Korea",
             "codes": ["KOR", "KOREA"],
             "description": "Korea region releases"
         },
-        "NLD": {
+        "Netherlands": {
+            "name": "Netherlands",
             "codes": ["NLD", "NETHERLANDS"],
             "description": "Netherlands region releases"
         },
-        "ESP": {
+        "Spain": {
+            "name": "Spain",
             "codes": ["ESP", "SPAIN"],
             "description": "Spain region releases"
         },
-        "SWE": {
+        "Sweden": {
+            "name": "Sweden",
             "codes": ["SWE", "SWEDEN"],
             "description": "Sweden region releases"
         },
-        "USA": {
-            "codes": ["USA", "UNITEDSTATES", "UNITED STATES"],
-            "description": "United States releases",
-            "notes": "Includes Canada releases"
-        },
-        "FIN": {
+        "Finland": {
+            "name": "Finland",
             "codes": ["FIN", "FINLAND"],
             "description": "Finland region releases"
         },
-        "GRC": {
+        "Greece": {
+            "name": "Greece",
             "codes": ["GRC", "GREECE"],
             "description": "Greece region releases"
         }
     },
     "multi_region_codes": {
-        "WORLD": {
+        "World": {
+            "name": "World",
             "codes": ["WORLD", "GLOBAL", "ALL", "UN", "UNKNOWN", "UNL"],
             "description": "Worldwide release",
             "includes": ["ALL"]
         },
-        "EUROPE": {
+        "Europe": {
+            "name": "Europe",
             "codes": ["EUR", "EUROPE"],
             "description": "European release",
             "includes": ["FRA", "DEU", "ITA", "ESP", "NLD", "SWE"]
         },
-        "ASIA": {
+        "Asia": {
+            "name": "Asia",
             "codes": ["ASI", "ASIA"],
             "description": "Asian release",
             "includes": ["CHN", "HKG", "KOR"]
         },
-        "JPN": {
+        "Japan": {
+            "name": "Japan",
             "codes": ["JAP", "JAPAN"],
             "description": "Japanese release",
             "includes": ["JPN"]
         },
         "USA": {
+            "name": "USA",
             "codes": ["USA", "UNITEDSTATES", "UNITED STATES"],
             "description": "North American release",
             "includes": ["USA", "CAN"]
