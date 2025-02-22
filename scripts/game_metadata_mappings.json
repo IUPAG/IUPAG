@@ -361,7 +361,7 @@
             "description": "Epic Games Store distribution"
         },
         "dist_virtual_console": {
-            "name": "VirtualConsole",
+            "name": "Virtual Console",
             "codes": ["Virtual Console", "VC"],
             "description": "Nintendo Virtual Console distribution"
         },
