@@ -72,12 +72,7 @@ class MetadataManager:
                 return region_data['name']
         return None
 
-    def extract_languages(self, game_name):
-        # confirm it's a tranlation before grabbing the languages
-        game_name = game_name.upper()
-        if "(T-" not in game_name:
-            return []
-        
+    def extract_languages(self, game_name):        
         # Look for language codes in parentheses
         lang_matches = re.findall(r'\(([^)]+)\)', game_name)
         matched_languages = set()
