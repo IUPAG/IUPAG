@@ -4,78 +4,108 @@
             "name": "Australia",
             "codes": ["AUS", "AUSTRALIA"],
             "description": "Australia region releases",
-            "notes": "Should not be combined with Europe releases"
+            "notes": "Should not be combined with Europe releases",
+            "primary_language": "English"
         },
         "Brazil": {
             "name": "Brazil",
             "codes": ["BRA", "BRAZIL"],
-            "description": "Brazil region releases"
+            "description": "Brazil region releases",
+            "primary_language": "Portuguese"
         },
         "Canada": {
             "name": "Canada",
             "codes": ["CAN", "CANADA"],
             "description": "Canada region releases",
-            "notes": "Typically included with USA releases"
+            "notes": "Typically included with USA releases",
+            "primary_language": "English",
+            "secondary_languages": ["French"]
         },
         "China": {
             "name": "China",
             "codes": ["CHN", "CHINA"],
-            "description": "China region releases"
+            "description": "China region releases",
+            "primary_language": "Chinese"
         },
         "France": {
             "name": "France",
             "codes": ["FRA", "FRANCE"],
-            "description": "France region releases"
+            "description": "France region releases",
+            "primary_language": "French"
         },
         "Germany": {
             "name": "Germany",
             "codes": ["GER", "GERMANY"],
-            "description": "Germany region releases"
+            "description": "Germany region releases",
+            "primary_language": "German"
         },
         "Hong Kong": {
             "name": "Hong Kong",
             "codes": ["HKG", "HONGKONG"],
-            "description": "Hong Kong region releases"
+            "description": "Hong Kong region releases",
+            "primary_language": "Chinese",
+            "secondary_languages": ["English"]
         },
         "Italy": {
             "name": "Italy",
             "codes": ["ITA", "ITALY"],
-            "description": "Italy region releases"
+            "description": "Italy region releases",
+            "primary_language": "Italian"
         },
         "Japan": {
             "name": "Japan",
             "codes": ["JAP", "JAPAN"],
-            "description": "Japan region releases"
+            "description": "Japan region releases",
+            "primary_language": "Japanese"
         },
         "Korea": {
             "name": "Korea",
             "codes": ["KOR", "KOREA"],
-            "description": "Korea region releases"
+            "description": "Korea region releases",
+            "primary_language": "Korean"
         },
         "Netherlands": {
             "name": "Netherlands",
             "codes": ["NLD", "NETHERLANDS"],
-            "description": "Netherlands region releases"
+            "description": "Netherlands region releases",
+            "primary_language": "Dutch"
+        },
+        "Portugal": {
+            "name": "Portugal",
+            "codes": ["PRT", "PORTUGAL"],
+            "description": "Portugal region releases",
+            "primary_language": "Portuguese"
         },
         "Spain": {
             "name": "Spain",
             "codes": ["ESP", "SPAIN"],
-            "description": "Spain region releases"
+            "description": "Spain region releases",
+            "primary_language": "Spanish"
         },
         "Sweden": {
             "name": "Sweden",
             "codes": ["SWE", "SWEDEN"],
-            "description": "Sweden region releases"
+            "description": "Sweden region releases",
+            "primary_language": "Swedish"
+        },
+        "Taiwan": {
+            "name": "Taiwan",
+            "codes": ["TWN", "TAIWAN"],
+            "description": "Taiwan region releases",
+            "primary_language": "Chinese",
+            "secondary_languages": ["English"]
         },
         "Finland": {
             "name": "Finland",
             "codes": ["FIN", "FINLAND"],
-            "description": "Finland region releases"
+            "description": "Finland region releases",
+            "primary_language": "Finnish"
         },
         "Greece": {
             "name": "Greece",
             "codes": ["GRC", "GREECE"],
-            "description": "Greece region releases"
+            "description": "Greece region releases",
+            "primary_language": "Greek"
         }
     },
     "multi_region_codes": {
@@ -83,108 +113,133 @@
             "name": "World",
             "codes": ["WORLD", "GLOBAL", "ALL", "UN", "UNKNOWN", "UNL"],
             "description": "Worldwide release",
-            "includes": ["ALL"]
+            "primary_language": "English",
+            "secondary_languages": ["French", "German", "Spanish", "Italian", "Japanese"]
         },
         "Europe": {
             "name": "Europe",
             "codes": ["EUR", "EUROPE"],
             "description": "European release",
-            "includes": ["FRA", "DEU", "ITA", "ESP", "NLD", "SWE"]
+            "primary_language": "English",
+            "secondary_languages": ["French", "German", "Spanish", "Italian", "Dutch"]
         },
         "Asia": {
             "name": "Asia",
             "codes": ["ASI", "ASIA"],
             "description": "Asian release",
-            "includes": ["CHN", "HKG", "KOR"]
+            "primary_language": "Chinese",
+            "secondary_languages": ["Korean", "English"]
         },
         "Japan": {
             "name": "Japan",
             "codes": ["JAP", "JAPAN"],
             "description": "Japanese release",
-            "includes": ["JPN"]
+            "primary_language": "Japanese"
         },
         "USA": {
             "name": "USA",
             "codes": ["USA", "UNITEDSTATES", "UNITED STATES"],
             "description": "North American release",
-            "includes": ["USA", "CAN"]
+            "primary_language": "English",
+            "secondary_languages": []
         }
     },
     "language_codes": {
         "English": {
             "name": "En",
             "codes": ["EN", "ENG", "ENGLISH"],
-            "description": "English language"
+            "description": "English language",
+            "related_regions": ["USA", "Canada", "Australia", "Hong Kong", "Europe"]
         },
         "French": {
             "name": "Fr",
             "codes": ["FR", "FRA", "FRENCH"],
-            "description": "French language"
+            "description": "French language",
+            "related_regions": ["France", "Canada", "Europe"]
         },
         "German": {
             "name": "De",
             "codes": ["DE", "DEU", "GER", "GERMAN"],
-            "description": "German language"
+            "description": "German language",
+            "related_regions": ["Germany", "Europe"]
         },
         "Spanish": {
             "name": "Es",
             "codes": ["ES", "ESP", "SPANISH"],
-            "description": "Spanish language"
+            "description": "Spanish language",
+            "related_regions": ["Spain", "Europe"]
         },
         "Italian": {
             "name": "It",
             "codes": ["IT", "ITA", "ITALIAN"],
-            "description": "Italian language"
+            "description": "Italian language",
+            "related_regions": ["Italy", "Europe"]
         },
         "Japanese": {
             "name": "Ja",
             "codes": ["JA", "JPN", "JAPANESE"],
-            "description": "Japanese language"
+            "description": "Japanese language",
+            "related_regions": ["Japan"]
         },
         "Korean": {
             "name": "Ko",
             "codes": ["KO", "KOR", "KOREAN"],
-            "description": "Korean language"
+            "description": "Korean language",
+            "related_regions": ["Korea"]
         },
         "Chinese": {
             "name": "Zh",
             "codes": ["ZH", "CHN", "CHINESE"],
-            "description": "Chinese language"
+            "description": "Chinese language",
+            "related_regions": ["China", "Hong Kong", "Asia"]
         },
         "Dutch": {
             "name": "Nl",
             "codes": ["NL", "NLD", "DUTCH"],
-            "description": "Dutch language"
+            "description": "Dutch language",
+            "related_regions": ["Netherlands", "Europe"]
         },
         "Portuguese": {
             "name": "Pt",
             "codes": ["PT", "POR", "PORTUGUESE"],
-            "description": "Portuguese language"
+            "description": "Portuguese language",
+            "related_regions": ["Portugal", "Brazil"]
+        },
+        "Brazilian Portuguese": {
+            "name": "Pt-BR",
+            "codes": ["PT-BR", "BRAZILIAN PORTUGUESE"],
+            "description": "Brazilian Portuguese language",
+            "related_regions": ["Brazil"]
         },
         "Russian": {
             "name": "Ru",
             "codes": ["RU", "RUS", "RUSSIAN"],
-            "description": "Russian language"
+            "description": "Russian language",
+            "related_regions": []
         },
         "Swedish": {
             "name": "Sv",
             "codes": ["SV", "SWE", "SWEDISH"],
-            "description": "Swedish language"
+            "description": "Swedish language",
+            "related_regions": ["Sweden"]
         },
         "Finnish": {
             "name": "Fi",
             "codes": ["FI", "FIN", "FINNISH"],
-            "description": "Finnish language"
+            "description": "Finnish language",
+            "related_regions": ["Finland"]
         },
         "Hindi": {
             "name": "Hi",
             "codes": ["HI", "HIN", "HINDI"],
-            "description": "Hindi language"
+            "description": "Hindi language",
+            "related_regions": []
         },
         "Ukrainian": {
             "name": "Uk",
             "codes": ["UK", "UKR", "UKRAINIAN"],
-            "description": "Ukrainian language"
+            "description": "Ukrainian language",
+            "related_regions": []
         }
     },
     "revision": {

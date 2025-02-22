@@ -81,8 +81,27 @@ class MetadataManager:
             # Split by comma or space
             tokens = [token.strip() for token in re.split(r'[,\s]+', match)]
             for token in tokens:
+                # Try direct language matching first
                 lang = self.find_matching_language(token)
                 if lang:
                     matched_languages.add(lang)
+                else:
+                    # Try region-based language detection
+                    region = self.find_matching_region(token)
+                    if region:
+                        # Check single regions
+                        if region in self.metadata['region_codes']:
+                            primary_lang = self.metadata['region_codes'][region]['primary_language']
+                            # Find the language code for the primary language
+                            for lang_key, lang_data in self.metadata['language_codes'].items():
+                                if lang_key == primary_lang:
+                                    matched_languages.add(lang_data['name'])
+                        # Check multi-regions
+                        elif region in self.metadata['multi_region_codes']:
+                            primary_lang = self.metadata['multi_region_codes'][region]['primary_language']
+                            # Find the language code for the primary language
+                            for lang_key, lang_data in self.metadata['language_codes'].items():
+                                if lang_key == primary_lang:
+                                    matched_languages.add(lang_data['name'])
 
         return sorted(list(matched_languages))
