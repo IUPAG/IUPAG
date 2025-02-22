@@ -24,10 +24,10 @@ class Game:
         self.release_date = "1970-01-01"  # Default Unix epoch if unknown
         self.revision = "rev10"  # Default to retail release
         self.languages = []  # List of supported languages
-        self.dump_flags = []  # List of dump info flags
+        self.dump_flags = ["[!]"]  # List of dump info flags
         self.attributes = {
             "players": "1P",  # Number of players
-            "genres": [],     # List of genres in L33TC0D3
+            "genres": ["G3NR3"],     # List of genres in L33TC0D3
             "controllers": [] # Supported controllers
         }
         self.meta_info = []  # List of additional metadata
@@ -112,7 +112,7 @@ class Game:
             
         # Dump flags
         if self.dump_flags:
-            parts.append(f"[{''.join(self.dump_flags)}]")
+            parts.append(''.join(self.dump_flags))
             
         # Attributes
         if any(v for k, v in self.attributes.items() if v):

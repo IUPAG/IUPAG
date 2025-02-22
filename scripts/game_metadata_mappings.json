@@ -446,5 +446,128 @@
             "codes": ["Hack", "ROM Hack", "Mod", "Modded"],
             "description": "Indicates ROM hack or mod"
         }
+    },
+    "dump_flags": {
+        "Alternate": {
+            "name": "[a]",
+            "codes": "[a]",
+            "description": "Alternate re-release w/ unknown version",
+            "deprecated": true
+        },
+        "BadDump": {
+            "name": "[b]",
+            "codes": "[b]",
+            "description": "Bad Dump &/or damaged image",
+            "deprecated": false
+        },
+        "Cracked": {
+            "name": "[cr]",
+            "codes": "[cr]",
+            "description": "Copy Protection removed",
+            "deprecated": false
+        },
+        "Diff": {
+            "name": "[d]",
+            "codes": "[d]",
+            "description": "Small \"GP\" patch file (in any format)",
+            "deprecated": false
+        },
+        "Fixed": {
+            "name": "[f]",
+            "codes": "[f]",
+            "description": "Hacked with improvement &/or \"fix\"",
+            "deprecated": true
+        },
+        "Hacked": {
+            "name": "[h]",
+            "codes": "[h]",
+            "description": "Intentional Hack but not verifed as [$] (good)",
+            "deprecated": false
+        },
+        "IncompleteTranslation": {
+            "name": "[i]",
+            "codes": "[i]",
+            "description": "Not fully translated",
+            "deprecated": true
+        },
+        "Modified": {
+            "name": "[m]",
+            "codes": "[m]",
+            "description": "Unintentional modification: i.e. Has a save file",
+            "deprecated": false
+        },
+        "re-Named": {
+            "name": "[n]",
+            "codes": "[n]",
+            "description": "Filename is different from Parent (translated)",
+            "deprecated": true
+        },
+        "Overdump": {
+            "name": "[o]",
+            "codes": "[o]",
+            "description": "The image is damaged (too much data)",
+            "deprecated": false
+        },
+        "Pirate": {
+            "name": "[p]",
+            "codes": "[p]",
+            "description": "Violates international IP",
+            "deprecated": true
+        },
+        "Sample": {
+            "name": "[s]",
+            "codes": "[s]",
+            "description": "i.e. Alpha,Beta,Proto,Demo,Sample",
+            "deprecated": false,
+            "notes": "proposal only"
+        },
+        "Trained": {
+            "name": "[t]",
+            "codes": "[t]",
+            "description": "Adds cheats &/or cheat menu",
+            "deprecated": false
+        },
+        "Translated": {
+            "name": "[tr]",
+            "codes": "[tr]",
+            "description": "Translated, but not verifed as [$] (good)",
+            "deprecated": false
+        },
+        "Underdump": {
+            "name": "[u]",
+            "codes": "[u]",
+            "description": "The image is damaged (missing data)",
+            "deprecated": false
+        },
+        "Virus": {
+            "name": "[v]",
+            "codes": "[v]",
+            "description": "Infected with a virus",
+            "deprecated": false
+        },
+        "BadChecksum": {
+            "name": "[x]",
+            "codes": "[x]",
+            "description": "Bad Checksum or Alternative Checksum Routine",
+            "deprecated": false
+        },
+        "VerifiedGood": {
+            "name": "[!]",
+            "codes": "[!]",
+            "description": "Verified Good Dump",
+            "deprecated": false
+        },
+        "VerifiedHack": {
+            "name": "[$]",
+            "codes": "[$]",
+            "description": "Verified Good Hack (or Translation)",
+            "deprecated": false
+        },
+        "Unknown": {
+            "name": "[]",
+            "codes": "[]",
+            "description": "Nothing is known about the dump",
+            "deprecated": false
+        }
     }
 }

@@ -63,6 +63,7 @@ def parse_dat_file(file_path):
             game.revision = metadata_manager.get_revision_name(game_name)
             game.release_date = extract_date(game_name)
             game.meta_info = metadata_manager.extract_metainfo(game_name)
+            game.dump_flags = metadata_manager.extract_dump_flags(game_name)
             
             system.add_game(game)
                 

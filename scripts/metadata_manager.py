@@ -53,6 +53,23 @@ class MetadataManager:
             return False
         return self.metadata['multi_region_codes'][region].get('includes', []) == ["ALL"]
 
+    def extract_dump_flags(self, game_name):
+        # Example of a game with dump flags: Super Mario Bros. (World) [b]
+        
+        game_name = game_name.upper()
+        dump_flags = []
+        # Find all text within brackets
+        parts = [part.strip('[]') for part in game_name.split('[')[1:]]
+        
+        for part in parts:
+            for flag_key, flag_data in self.metadata['dump_flags'].items():
+                for flag_code in flag_data['codes']:
+                    if flag_code.upper() == part:
+                        dump_flags.append(flag_data['name'])
+        if not dump_flags:
+            dump_flags.append("[]") # Default to unknown dump flag
+        return dump_flags
+
     def extract_metainfo(self, game_name):
         # Example of a game with metainfo: Super Noah's Ark 3D (World) (Steam) (Unl)
         
