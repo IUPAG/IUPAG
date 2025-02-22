@@ -18,8 +18,8 @@ class Game:
         self.title = ""  # Main title
         self.subtitle = ""  # Subtitle or hack name
         self.separator = "-"  # -, -;, ;=, or ~ depending on type
-        self.developer = ""  # Game developer
-        self.publisher = ""  # Game publisher
+        self.developer = "Developer"  # Game developer
+        self.publisher = "Publisher"  # Game publisher
         self.region = "World"  # Default region if unknown
         self.release_date = "1970-01-01"  # Default Unix epoch if unknown
         self.revision = "rev10"  # Default to retail release
@@ -78,7 +78,7 @@ class Game:
         """Generate filename according to IUPAG naming convention.
         
         Format:
-        Title <sep> Subtitle (@Dev, Pub)-(#Region)-(vDate)-(revX.Y.Z)-(T-Lang) [flag]-{Attributes}-(MetaInfo).ext
+        Title <sep> Subtitle (@Developer, Publisher)-(#Region)-(vDate)-(revX.Y.Z)-(T-Lang) [flag]-{Attributes}-(MetaInfo).ext
         """
         parts = []
         

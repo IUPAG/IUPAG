@@ -36,6 +36,17 @@ class MetadataManager:
                 if rev_code.upper() in code:
                     return rev_data['name']
         return "rev10"
+    
+    def get_revision_metainfo_name(self, code):
+        if not self.metadata:
+            return "Revision"
+        
+        code = code.upper()
+        for rev_type, rev_data in self.metadata['revision'].items():
+            for rev_code in rev_data['codes']:
+                if rev_code.upper() in code:
+                    return rev_data['metainfo_name']
+        return "rev10"
 
     def is_world_region(self, region):
         if not self.metadata or region not in self.metadata['multi_region_codes']:
@@ -55,6 +66,11 @@ class MetadataManager:
                 for meta_code in meta_data['codes']:
                     if meta_code.upper() == part:
                         meta_info.append(meta_data['name'])
+        
+        # Add Revision's metainfo
+        revision = self.get_revision_metainfo_name(game_name)
+        if revision:
+            meta_info.append(revision)
         return meta_info
 
     def find_matching_region(self, token):

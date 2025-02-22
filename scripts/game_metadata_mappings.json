@@ -255,6 +255,7 @@
                 "Proto 4",
                 "Proto 5"
             ],
+            "metainfo_name": "Proto",
             "description": "Early development version, not intended for release"
         },
         "Alpha": {
@@ -263,6 +264,7 @@
                 "Rev 01",
                 "Alpha"
             ],
+            "metainfo_name": "Alpha",
             "description": "Alpha version"
         },
         "Beta": {
@@ -276,6 +278,7 @@
                 "Beta 4",
                 "Beta 5"
             ],
+            "metainfo_name": "Beta",
             "description": "Beta version"
         },
         "Demo": {
@@ -289,6 +292,7 @@
                 "Demo 4",
                 "Demo 5"
             ],
+            "metainfo_name": "Demo",
             "description": "Demo version"
         },
         "Sample": {
@@ -297,6 +301,7 @@
                 "Rev 04",
                 "Sample"
             ],
+            "metainfo_name": "Sample",
             "description": "Sample version"
         },
         "Release": {
@@ -313,6 +318,7 @@
                 "Rev 18",
                 "Rev 19"
             ],
+            "metainfo_name": "",
             "description": "Official retail release versions"
         },
         "Re-Release or Aftermarket": {
@@ -329,6 +335,7 @@
                 "Rev 28",
                 "Rev 29"
             ], 
+            "metainfo_name": "Aftermarket",
             "description": "Aftermarket or modern re-releases"
         }
     },
