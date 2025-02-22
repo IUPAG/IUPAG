@@ -18,8 +18,8 @@ class Game:
         self.title = ""  # Main title
         self.subtitle = ""  # Subtitle or hack name
         self.separator = "-"  # -, -;, ;=, or ~ depending on type
-        self.developer = "Developer"  # Game developer
-        self.publisher = "Publisher"  # Game publisher
+        self.developer = "Dev"  # Game developer
+        self.publisher = "Pub"  # Game publisher
         self.region = "World"  # Default region if unknown
         self.release_date = "1970-01-01"  # Default Unix epoch if unknown
         self.revision = "rev10"  # Default to retail release
