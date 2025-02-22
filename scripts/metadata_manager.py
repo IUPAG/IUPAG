@@ -86,7 +86,7 @@ class MetadataManager:
         
         # Add Revision's metainfo
         revision = self.get_revision_metainfo_name(game_name)
-        if revision:
+        if revision and revision != "rev10":
             meta_info.append(revision)
         return meta_info
 
