@@ -1,0 +1,573 @@
+{
+    "region_codes": {
+        "Australia": {
+            "name": "Australia",
+            "codes": ["AUS", "AUSTRALIA"],
+            "description": "Australia region releases",
+            "notes": "Should not be combined with Europe releases",
+            "primary_language": "English"
+        },
+        "Brazil": {
+            "name": "Brazil",
+            "codes": ["BRA", "BRAZIL"],
+            "description": "Brazil region releases",
+            "primary_language": "Portuguese"
+        },
+        "Canada": {
+            "name": "Canada",
+            "codes": ["CAN", "CANADA"],
+            "description": "Canada region releases",
+            "notes": "Typically included with USA releases",
+            "primary_language": "English",
+            "secondary_languages": ["French"]
+        },
+        "China": {
+            "name": "China",
+            "codes": ["CHN", "CHINA"],
+            "description": "China region releases",
+            "primary_language": "Chinese"
+        },
+        "France": {
+            "name": "France",
+            "codes": ["FRA", "FRANCE"],
+            "description": "France region releases",
+            "primary_language": "French"
+        },
+        "Germany": {
+            "name": "Germany",
+            "codes": ["GER", "GERMANY"],
+            "description": "Germany region releases",
+            "primary_language": "German"
+        },
+        "Hong Kong": {
+            "name": "Hong Kong",
+            "codes": ["HKG", "HONGKONG"],
+            "description": "Hong Kong region releases",
+            "primary_language": "Chinese",
+            "secondary_languages": ["English"]
+        },
+        "Italy": {
+            "name": "Italy",
+            "codes": ["ITA", "ITALY"],
+            "description": "Italy region releases",
+            "primary_language": "Italian"
+        },
+        "Japan": {
+            "name": "Japan",
+            "codes": ["JAP", "JAPAN"],
+            "description": "Japan region releases",
+            "primary_language": "Japanese"
+        },
+        "Korea": {
+            "name": "Korea",
+            "codes": ["KOR", "KOREA"],
+            "description": "Korea region releases",
+            "primary_language": "Korean"
+        },
+        "Netherlands": {
+            "name": "Netherlands",
+            "codes": ["NLD", "NETHERLANDS"],
+            "description": "Netherlands region releases",
+            "primary_language": "Dutch"
+        },
+        "Portugal": {
+            "name": "Portugal",
+            "codes": ["PRT", "PORTUGAL"],
+            "description": "Portugal region releases",
+            "primary_language": "Portuguese"
+        },
+        "Spain": {
+            "name": "Spain",
+            "codes": ["ESP", "SPAIN"],
+            "description": "Spain region releases",
+            "primary_language": "Spanish"
+        },
+        "Sweden": {
+            "name": "Sweden",
+            "codes": ["SWE", "SWEDEN"],
+            "description": "Sweden region releases",
+            "primary_language": "Swedish"
+        },
+        "Taiwan": {
+            "name": "Taiwan",
+            "codes": ["TWN", "TAIWAN"],
+            "description": "Taiwan region releases",
+            "primary_language": "Chinese",
+            "secondary_languages": ["English"]
+        },
+        "Finland": {
+            "name": "Finland",
+            "codes": ["FIN", "FINLAND"],
+            "description": "Finland region releases",
+            "primary_language": "Finnish"
+        },
+        "Greece": {
+            "name": "Greece",
+            "codes": ["GRC", "GREECE"],
+            "description": "Greece region releases",
+            "primary_language": "Greek"
+        }
+    },
+    "multi_region_codes": {
+        "World": {
+            "name": "World",
+            "codes": ["WORLD", "GLOBAL", "ALL", "UN", "UNKNOWN", "UNL"],
+            "description": "Worldwide release",
+            "primary_language": "English",
+            "secondary_languages": ["French", "German", "Spanish", "Italian", "Japanese"]
+        },
+        "Europe": {
+            "name": "Europe",
+            "codes": ["EUR", "EUROPE"],
+            "description": "European release",
+            "primary_language": "English",
+            "secondary_languages": ["French", "German", "Spanish", "Italian", "Dutch"]
+        },
+        "Asia": {
+            "name": "Asia",
+            "codes": ["ASI", "ASIA"],
+            "description": "Asian release",
+            "primary_language": "Chinese",
+            "secondary_languages": ["Korean", "English"]
+        },
+        "Japan": {
+            "name": "Japan",
+            "codes": ["JAP", "JAPAN"],
+            "description": "Japanese release",
+            "primary_language": "Japanese"
+        },
+        "USA": {
+            "name": "USA",
+            "codes": ["USA", "UNITEDSTATES", "UNITED STATES"],
+            "description": "North American release",
+            "primary_language": "English",
+            "secondary_languages": []
+        }
+    },
+    "language_codes": {
+        "English": {
+            "name": "En",
+            "codes": ["EN", "ENG", "ENGLISH"],
+            "description": "English language",
+            "related_regions": ["USA", "Canada", "Australia", "Hong Kong", "Europe"]
+        },
+        "French": {
+            "name": "Fr",
+            "codes": ["FR", "FRA", "FRENCH"],
+            "description": "French language",
+            "related_regions": ["France", "Canada", "Europe"]
+        },
+        "German": {
+            "name": "De",
+            "codes": ["DE", "DEU", "GER", "GERMAN"],
+            "description": "German language",
+            "related_regions": ["Germany", "Europe"]
+        },
+        "Spanish": {
+            "name": "Es",
+            "codes": ["ES", "ESP", "SPANISH"],
+            "description": "Spanish language",
+            "related_regions": ["Spain", "Europe"]
+        },
+        "Italian": {
+            "name": "It",
+            "codes": ["IT", "ITA", "ITALIAN"],
+            "description": "Italian language",
+            "related_regions": ["Italy", "Europe"]
+        },
+        "Japanese": {
+            "name": "Ja",
+            "codes": ["JA", "JPN", "JAPANESE"],
+            "description": "Japanese language",
+            "related_regions": ["Japan"]
+        },
+        "Korean": {
+            "name": "Ko",
+            "codes": ["KO", "KOR", "KOREAN"],
+            "description": "Korean language",
+            "related_regions": ["Korea"]
+        },
+        "Chinese": {
+            "name": "Zh",
+            "codes": ["ZH", "CHN", "CHINESE"],
+            "description": "Chinese language",
+            "related_regions": ["China", "Hong Kong", "Asia"]
+        },
+        "Dutch": {
+            "name": "Nl",
+            "codes": ["NL", "NLD", "DUTCH"],
+            "description": "Dutch language",
+            "related_regions": ["Netherlands", "Europe"]
+        },
+        "Portuguese": {
+            "name": "Pt",
+            "codes": ["PT", "POR", "PORTUGUESE"],
+            "description": "Portuguese language",
+            "related_regions": ["Portugal", "Brazil"]
+        },
+        "Brazilian Portuguese": {
+            "name": "Pt-BR",
+            "codes": ["PT-BR", "BRAZILIAN PORTUGUESE"],
+            "description": "Brazilian Portuguese language",
+            "related_regions": ["Brazil"]
+        },
+        "Russian": {
+            "name": "Ru",
+            "codes": ["RU", "RUS", "RUSSIAN"],
+            "description": "Russian language",
+            "related_regions": []
+        },
+        "Swedish": {
+            "name": "Sv",
+            "codes": ["SV", "SWE", "SWEDISH"],
+            "description": "Swedish language",
+            "related_regions": ["Sweden"]
+        },
+        "Finnish": {
+            "name": "Fi",
+            "codes": ["FI", "FIN", "FINNISH"],
+            "description": "Finnish language",
+            "related_regions": ["Finland"]
+        },
+        "Hindi": {
+            "name": "Hi",
+            "codes": ["HI", "HIN", "HINDI"],
+            "description": "Hindi language",
+            "related_regions": []
+        },
+        "Ukrainian": {
+            "name": "Uk",
+            "codes": ["UK", "UKR", "UKRAINIAN"],
+            "description": "Ukrainian language",
+            "related_regions": []
+        }
+    },
+    "revision": {
+        "Prototype": {
+            "name": "rev00",
+            "codes": [
+                "Prototype",
+                "Tech Demo",
+                "Proto",
+                "Proto 1",
+                "Proto 2",
+                "Proto 3",
+                "Proto 4",
+                "Proto 5"
+            ],
+            "metainfo_name": "Proto",
+            "description": "Early development version, not intended for release"
+        },
+        "Alpha": {
+            "name": "rev01",
+            "codes": [
+                "Rev 01",
+                "Alpha"
+            ],
+            "metainfo_name": "Alpha",
+            "description": "Alpha version"
+        },
+        "Beta": {
+            "name": "rev02",
+            "codes": [
+                "Rev 02",
+                "Beta",
+                "Beta 1",
+                "Beta 2",
+                "Beta 3",
+                "Beta 4",
+                "Beta 5"
+            ],
+            "metainfo_name": "Beta",
+            "description": "Beta version"
+        },
+        "Demo": {
+            "name": "rev03",
+            "codes": [
+                "Rev 03",
+                "Demo",
+                "Demo 1",
+                "Demo 2",
+                "Demo 3",
+                "Demo 4",
+                "Demo 5"
+            ],
+            "metainfo_name": "Demo",
+            "description": "Demo version"
+        },
+        "Sample": {
+            "name": "rev04",
+            "codes": [
+                "Rev 04",
+                "Sample"
+            ],
+            "metainfo_name": "Sample",
+            "description": "Sample version"
+        },
+        "Release": {
+            "name": "rev10",
+            "codes": [
+                "Rev 10",
+                "Rev 11", 
+                "Rev 12",
+                "Rev 13",
+                "Rev 14",
+                "Rev 15",
+                "Rev 16",
+                "Rev 17",
+                "Rev 18",
+                "Rev 19"
+            ],
+            "metainfo_name": "",
+            "description": "Official retail release versions"
+        },
+        "Re-Release or Aftermarket": {
+            "name": "Re-release",
+            "codes": [
+                "Rev 20",
+                "Rev 21",
+                "Rev 22",
+                "Rev 23",
+                "Rev 24",
+                "Rev 25",
+                "Rev 26",
+                "Rev 27",
+                "Rev 28",
+                "Rev 29"
+            ], 
+            "metainfo_name": "Aftermarket",
+            "description": "Aftermarket or modern re-releases"
+        }
+    },
+    "metainfo_tags": {
+        "dist_steam": {
+            "name": "Steam",
+            "codes": ["STEAM"],
+            "description": "Steam platform distribution"
+        },
+        "dist_itch": {
+            "name": "Itch",
+            "codes": ["ITCH", "itch.io", "Itch Release"],
+            "description": "Itch.io platform distribution"
+        },
+        "dist_gog": {
+            "name": "GOG",
+            "codes": ["GOG", "Good Old Games", "GOG Release"],
+            "description": "GOG.com platform distribution"
+        },
+        "dist_epic": {
+            "name": "Epic",
+            "codes": ["EPIC", "Epic Games", "EGS"],
+            "description": "Epic Games Store distribution"
+        },
+        "dist_virtual_console": {
+            "name": "Virtual Console",
+            "codes": ["Virtual Console", "VC"],
+            "description": "Nintendo Virtual Console distribution"
+        },
+        "dist_unlicensed": {
+            "name": "Unl",
+            "codes": ["Unl", "Unlicensed"],
+            "description": "Unlicensed or unofficial release"
+        },
+        "dist_aftermarket": {
+            "name": "Aftermarket",
+            "codes": ["Aftermarket", "After Market", "Post-Release"],
+            "description": "Aftermarket or post-release distribution"
+        },
+        "platform _windows": {
+            "name": "Windows",
+            "codes": ["WIN", "Windows"],
+            "description": "Windows platform"
+        },
+        "platform_mac": {
+            "name": "Mac",
+            "codes": ["MAC", "MacOS", "OSX"],
+            "description": "Mac platform"
+        },
+        "platform_linux": {
+            "name": "Linux",
+            "codes": ["LIN", "Linux"],
+            "description": "Linux platform"
+        },
+        "platform_android": {
+            "name": "Android",
+            "codes": ["AND", "Android"],
+            "description": "Android platform"
+        },
+        "platform_ios": {
+            "name": "iOS",
+            "codes": ["IOS", "iPhone", "iPad"],
+            "description": "iOS platform"
+        },
+        "romhack_metrics": {
+            "name": "RomHack Metrics",
+            "codes": ["Exits=", "Stars=", "M#"],
+            "description": "Metrics for ROM hacks (exits, stars, mapper numbers)",
+            "format": "code+number"
+        },
+        "translation_literal": {
+            "name": "Translation Literal",
+            "codes": ["Translation", "Literal Translation"],
+            "description": "Literal translation of a game"
+        },
+        "translation_localized": {
+            "name": "Translation Localized",
+            "codes": ["Localized Translation"],
+            "description": "Localized translation of a game"
+        },
+        "content_nsfw": {
+            "name": "NSFW",
+            "codes": ["NSFW", "Adult", "Nudity"],
+            "description": "Contains nudity or adult content"
+        },
+        "edition_special": {
+            "name": "Special Edition",
+            "codes": ["Special Edition", "SE", "Collector's Edition", "CE", "Limited Edition", "LE"],
+            "description": "Special, collector's, or limited edition versions"
+        },
+        "edition_deluxe": {
+            "name": "Deluxe Edition",
+            "codes": ["Deluxe Edition", "DE", "Complete Edition"],
+            "description": "Deluxe or complete editions"
+        },
+        "edition_goty": {
+            "name": "GOTY",
+            "codes": ["Game of the Year", "GOTY", "Game of the year edition", "GOTY Edition"],
+            "description": "Game of the Year editions"
+        },
+        "parent_clone_child": {
+            "name": "Clone",
+            "codes": ["Clone"],
+            "description": "Indicates clone or hack of parent ROM"
+        },
+        "hack": {
+            "name": "Hack",
+            "codes": ["Hack", "ROM Hack", "Mod", "Modded"],
+            "description": "Indicates ROM hack or mod"
+        }
+    },
+    "dump_flags": {
+        "Alternate": {
+            "name": "[a]",
+            "codes": "[a]",
+            "description": "Alternate re-release w/ unknown version",
+            "deprecated": true
+        },
+        "BadDump": {
+            "name": "[b]",
+            "codes": "[b]",
+            "description": "Bad Dump &/or damaged image",
+            "deprecated": false
+        },
+        "Cracked": {
+            "name": "[cr]",
+            "codes": "[cr]",
+            "description": "Copy Protection removed",
+            "deprecated": false
+        },
+        "Diff": {
+            "name": "[d]",
+            "codes": "[d]",
+            "description": "Small \"GP\" patch file (in any format)",
+            "deprecated": false
+        },
+        "Fixed": {
+            "name": "[f]",
+            "codes": "[f]",
+            "description": "Hacked with improvement &/or \"fix\"",
+            "deprecated": true
+        },
+        "Hacked": {
+            "name": "[h]",
+            "codes": "[h]",
+            "description": "Intentional Hack but not verifed as [$] (good)",
+            "deprecated": false
+        },
+        "IncompleteTranslation": {
+            "name": "[i]",
+            "codes": "[i]",
+            "description": "Not fully translated",
+            "deprecated": true
+        },
+        "Modified": {
+            "name": "[m]",
+            "codes": "[m]",
+            "description": "Unintentional modification: i.e. Has a save file",
+            "deprecated": false
+        },
+        "re-Named": {
+            "name": "[n]",
+            "codes": "[n]",
+            "description": "Filename is different from Parent (translated)",
+            "deprecated": true
+        },
+        "Overdump": {
+            "name": "[o]",
+            "codes": "[o]",
+            "description": "The image is damaged (too much data)",
+            "deprecated": false
+        },
+        "Pirate": {
+            "name": "[p]",
+            "codes": "[p]",
+            "description": "Violates international IP",
+            "deprecated": true
+        },
+        "Sample": {
+            "name": "[s]",
+            "codes": "[s]",
+            "description": "i.e. Alpha,Beta,Proto,Demo,Sample",
+            "deprecated": false,
+            "notes": "proposal only"
+        },
+        "Trained": {
+            "name": "[t]",
+            "codes": "[t]",
+            "description": "Adds cheats &/or cheat menu",
+            "deprecated": false
+        },
+        "Translated": {
+            "name": "[tr]",
+            "codes": "[tr]",
+            "description": "Translated, but not verifed as [$] (good)",
+            "deprecated": false
+        },
+        "Underdump": {
+            "name": "[u]",
+            "codes": "[u]",
+            "description": "The image is damaged (missing data)",
+            "deprecated": false
+        },
+        "Virus": {
+            "name": "[v]",
+            "codes": "[v]",
+            "description": "Infected with a virus",
+            "deprecated": false
+        },
+        "BadChecksum": {
+            "name": "[x]",
+            "codes": "[x]",
+            "description": "Bad Checksum or Alternative Checksum Routine",
+            "deprecated": false
+        },
+        "VerifiedGood": {
+            "name": "[!]",
+            "codes": "[!]",
+            "description": "Verified Good Dump",
+            "deprecated": false
+        },
+        "VerifiedHack": {
+            "name": "[$]",
+            "codes": "[$]",
+            "description": "Verified Good Hack (or Translation)",
+            "deprecated": false
+        },
+        "Unknown": {
+            "name": "[]",
+            "codes": "[]",
+            "description": "Nothing is known about the dump",
+            "deprecated": false
+        }
+    }
+}

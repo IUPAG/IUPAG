@@ -1,0 +1,10 @@
+.venv
+
+# Where Dat files that need to be converted are stored
+.imports
+# Where the converted files are saved
+.exports
+
+__pycache__/
+*.pyc
+*.pyo
